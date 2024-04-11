@@ -1,0 +1,97 @@
+@import "../../css/responsive.scss";
+.profilePage {
+  display: flex;
+  justify-content: space-between;
+  //   gap: 20px;
+  height: 100%;
+  @include md {
+    height: 100%;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .details {
+    // padding-top: 60px;
+    padding: 60px 30px 30px 50px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include md {
+      padding: 60px 30px 30px 30px;
+      overflow-y: initial;
+      height: max-content;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      button {
+        padding: 12px 24px;
+        border: none;
+        background-color: #fece21;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      button {
+        width: max-content;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        background-color: #fe5121;
+        border: none;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+    // @include md {
+    //   padding: 0 20px 20px 30px;
+    // }
+    @include sm {
+      padding: 60px 15px 15px 20px;
+    }
+  }
+  .chatContainer {
+    width: 40%;
+    padding: 50px 50px 30px 30px;
+    // padding-top: 60px;
+    height: 100%;
+    background-color: #fcf5f3;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include md {
+      padding: 60px 30px 30px 30px;
+      overflow-y: initial;
+      height: max-content;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    @include sm {
+      padding: 0 20px 15px 15px;
+    }
+  }
+}

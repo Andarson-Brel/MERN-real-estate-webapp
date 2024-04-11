@@ -1,0 +1,218 @@
+@import "../../css/responsive.scss";
+.singlePage {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  @include md {
+    height: 100%;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .details {
+    padding: 60px 50px 50px 50px;
+    padding-bottom: 100px;
+    overflow-y: scroll;
+    width: 60%;
+    display: flex;
+    height: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include md {
+      padding: 60px 30px 30px 30px;
+      overflow-y: initial;
+      height: max-content;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    @include sm {
+      padding: 60px 20px 20px 20px;
+    }
+    .wrapper {
+      //   padding-right: 50px;
+      .info {
+        margin-top: 30px;
+        padding-bottom: 100px;
+        .top {
+          display: flex;
+          justify-content: space-between;
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h1 {
+              font-weight: 400;
+            }
+            .address {
+              display: flex;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+            .price {
+              padding: 5px;
+              background-color: rgba(254, 205, 81, 0.438);
+              border-radius: 5px;
+              width: max-content;
+            }
+          }
+          .user {
+            display: flex;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(254, 205, 81, 0.29);
+            padding: 10px 20px;
+            border-radius: 10px;
+            @include sm {
+              padding: 7px 15px;
+            }
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            span {
+              font-size: 16px;
+              font-weight: bold;
+            }
+          }
+        }
+        .bottom {
+          flex-direction: column;
+
+          margin-top: 20px;
+          column-rule: #555;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .features {
+    width: 40%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    background-color: #fcf5f3;
+    padding-top: 60px;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include md {
+      overflow-y: initial;
+      height: max-content;
+      width: 100%;
+    }
+    .wrapper {
+      padding: 0 20px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .feature {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+        img {
+          background-color: rgba(254, 205, 81, 0.29);
+        }
+        .featText {
+          span {
+            font-weight: bold;
+            //   font-size: 14px;
+          }
+          p {
+            font-size: 14px;
+            color: #8a8a8a;
+          }
+        }
+      }
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .listHorizontal {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include lg {
+          font-size: 12px;
+        }
+        .size {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: white;
+        }
+      }
+      .mapContainer {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        .map .leaflet-top,
+        .map .leaflet-bottom {
+          z-index: 1000;
+        }
+      }
+      .buttonContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        button {
+          display: flex;
+          gap: 20px;
+          background-color: #fff;
+          padding: 15px;
+          align-items: center;
+          border: 1px solid #f3c351;
+          border-radius: 5px;
+          cursor: pointer;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../css/responsive.scss";
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h1 {
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  .inputItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label {
+      font-size: 10px;
+    }
+    input,
+    select {
+      //   width: 100px;
+      padding: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  }
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  input {
+    width: 100px;
+  }
+  button {
+    width: 100px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fece21;
+    border: none;
+    img {
+      width: 24px;
+    }
+  }
+}
+.top {
+  input {
+    width: 100%;
+  }
+}
